@@ -163,21 +163,26 @@ body {
 
 @media(max-width: 767px) {
     .navbar-nav {
-        text-align: center; /* Centra los elementos del menú en dispositivos móviles */
+        text-align: center; 
     }
 
     .section-header,
-    .services .row,
-    .video-container {
-        text-align: center; /* Centra el contenido del encabezado y la sección "Terapia Online" en dispositivos móviles */
+    .services .row,    .video-container {
+        text-align: center; 
     }
 
     #VideoCss {
-        margin: 0 auto; /* Centra el video horizontalmente dentro de su contenedor */
+        margin: 0 auto; /
     }
 
     .container {
-        padding-left: 15px; /* Agrega un relleno izquierdo para evitar que el contenido se extienda hasta el borde de la pantalla en dispositivos móviles */
-        padding-right: 50px; /* Agrega un relleno derecho para evitar que el contenido se extienda hasta el borde de la pantalla en dispositivos móviles */
-    }
+        padding-left: 15px; 
+        padding-right: 50px; 
+}
+}
+/*REGISTRO*/
+
+.mi-clase {
+    color: #e7b921; 
+    
 }
