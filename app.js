@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import dotenv from 'dotenv' ;
 import conexionMongo from './src/config/baseDatos.js';
+import usuarioRouter from './src/routes/usuario.routes.js';
 
 
 // 2. CONFIGURAR NUESTRO SERVIDOR
@@ -22,6 +23,8 @@ app.use(express.static(rutaPublica));
 
 app.use(express.json()); 
 
+app.use("/api", usuarioRouter);
+
 
 //ESPECIFICAMOS QUE VAMOS A ACCEDER A NTRO index.html
 app.get("/",(req,res) =>{
@@ -33,3 +36,4 @@ app.get("/",(req,res) =>{
 app.listen(puerto, () => {
 console.log (`El servidor esta escuchando en http://localhost:${puerto}`);
 });
+
