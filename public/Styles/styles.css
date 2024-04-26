@@ -126,13 +126,39 @@ body {
     .section-padding {
         padding: 50px 0;
     }
-}
+/*ADICION RESPONSIVE*/
+    .navbar-toggler {
+        padding: 8px 10px;
+        font-size: 20px;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .services .section-header h2,
+    .portfolio .section-header h2 {
+        font-size: 25px;
+    }
+
+    .services .section-header p,
+    .portfolio .section-header p {
+        font-size: 14px;
+    }
+
+    .about .about-text,
+    .services .card-body,
+    .team .card-body {
+        text-align: center;
+    }
+
+    .about .about-img img {
+        margin-bottom: 20px;
+    }
+
 .ocre-text {
     color: #cc7722;
+
 }
-
-
-
 
 .footer-bg {
     background-color: hsl(53, 74%, 60%);
@@ -172,7 +198,7 @@ body {
     }
 
     #VideoCss {
-        margin: 0 auto; /
+        margin: 0 auto; 
     }
 
     .container {
@@ -185,4 +211,9 @@ body {
 .mi-clase {
     color: #e7b921; 
     
+}
+}
+
+#titulonomayusculas .no-uppercase {
+    text-transform: none;
 }
