@@ -11,7 +11,7 @@ body {
 }
 
 .carousel-item {
-    height: 80vh;
+    height: auto;
     min-height: 300px;
 }
 
@@ -34,7 +34,7 @@ body {
     line-height: 1.9;
 }
 
-.carousel-inner::before {
+.carousel-inner:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -44,6 +44,14 @@ body {
     background: rgba(0, 30, 82, 0.327);
     z-index: 1;
 
+}
+@media (max-width: 767px) {
+    #carouselE {
+        margin-top: 150px;
+    }
+}
+.carousel-item img {
+    max-height: 65%; 
 }
 
 .navbar-nav a {
@@ -66,7 +74,7 @@ body {
 }
 
 .w-100 {
-    height: 100 vh;
+    height: 100vh;
 }
 
 .navbar-toggler {
@@ -83,6 +91,8 @@ body {
     font-size: 20px;
 }
 
+
+
 @media(max-width: 767px) {
     .navbar-nav {
         text-align: center;
@@ -93,7 +103,7 @@ body {
     }
 
     .w-100 {
-        height: 70vh;
+        height: 60vh;
     }
 
     .carousel-caption {
@@ -217,3 +227,11 @@ body {
 #titulonomayusculas .no-uppercase {
     text-transform: none;
 }
+footer h5 {
+    font-size: 18px;
+    color: rgb(231, 200, 3);
+    margin-bottom: 10px; 
+    letter-spacing: 1px; 
+}
+
+
