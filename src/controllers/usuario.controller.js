@@ -35,17 +35,40 @@ export const postUsuario = async(req, res) => {
 
     }catch(error){
         //Para que me muestre un mensaje que me indique cuál es el error
-        return res.json({error: "error al crear el usuario, holi", message:error.message});
+        return res.json({error: "error al crear el usuario", message:error.message});
     }
 
 }
 
-//LOGICA PARA MODIFICAR USUARIOS
-export const putUsuario = async (req, res) => {  
-    return res.send("funciona la peticion PUT");
-}   
 
-//LOGICA PARA CREAR USUARIOS
-export const deleteUsuario = async (req, res)  => {
-    return res.send("funciona la peticion DELETE");
+//LÓGICA PARA MODIFICAR USUARIOS POR ID
+
+export const putUsuario = async(req, res) => {
+    try{
+        let datosModificar = req.body;
+        let idModificar = req.params._id; await usuarioModel.findByIdAndUpdate(idModificar,datosModificar);
+       
+        return res.json({message:"Usuario actualizado correctamente"});
+        
+    }catch(error){
+        return res.json({error: "error al modificar usuario", message:error.message});
+    }
+}
+
+
+//LÓGICA PARA ELIMINAR USUARIOS POR ID
+export const deleteUsuario = async(req, res) => {
+    try{
+        let idEliminar = req.params._id;
+        let usuarioEliminado = await usuarioModel.findByIdAndDelete(idEliminar);
+
+        if(usuarioEliminado){
+            return res.json({message: "Usuario eliminado correctamente"});
+        } else{
+            return res.json({message: "Ups! no se pudo eliminar ese usuario"});
+        }
+
+    }catch(error){
+        return res.json({error: "error al eliminar usuario", message:error.message});
+    }
 }
