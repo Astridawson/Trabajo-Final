@@ -50,19 +50,19 @@ function eliminarUsuario(event) {
 
     console.log(idUsuarioEliminar);
 
-    fetch(`http://localhost:9000/api/eliminarUsuario/${idUsuarioEliminar}` , {method: "DELETE"} ) .then(
+    fetch(`http://localhost:9000/api/eliminarUsuario/${idUsuarioEliminar}`, { method: "DELETE" }).then(
 
-    response => {
+        response => {
 
-        if(!response.ok){
+            if (!response.ok) {
 
-            console.error("Error! no se pudo eliminar usuario");
-        } else{
-        alert("Usuario eliminado correctamente")
-       mostrarUsuarios();
-        }
-    }).catch(error => {
+                console.error("Error! no se pudo eliminar usuario");
+            } else {
+                alert("Usuario eliminado correctamente")
+                mostrarUsuarios();
+            }
+        }).catch(error => {
 
-        console.log("Error al eliminar usuario",  error);
-    })
+            console.log("Error al eliminar usuario", error);
+        })
 }

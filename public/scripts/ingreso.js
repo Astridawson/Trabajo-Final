@@ -39,7 +39,7 @@ const iniciarSesion = async (event) => {
             if (esUsuarioRegistrado.correoElectronico == correoAdmin) {
                 alert("Hola administrador!");
                 window.location.href = "./admin.html"
-            }else{
+            } else {
 
                 alert("Ingreso exitoso");
                 window.location.href = "./index.html"
