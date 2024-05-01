@@ -27,7 +27,7 @@ function mostrarTabla(usuarios) {
         tabla.innerHTML += `
     
                 <tr>
-                    <td>${usuario.nombreCompleto}/td>
+                    <td>${usuario.nombreCompleto}</td>
                     <td>${usuario.correoElectronico}</td>
                     <td>
                         <button type="button" class="btn btn-danger" id="${usuario._id}" onclick="eliminarUsuario(event)"><i class="bi bi-trash"></i> Eliminar</button>
